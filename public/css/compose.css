@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.navbar {
+  border-radius: 0;
+  margin-bottom: 0;
+  padding-top: 10px;
+}
+
+.navbar-brand {
+  font-size: 18px; /* Adjust font size as needed */
+}
+
+.navbar-toggle {
+  background-color: #fff; /* Background color of the hamburger icon */
+}
+
+.navbar-toggle .icon-bar {
+  background-color: #333; /* Color of the hamburger icon bars */
+}
+
+.navbar-nav {
+  text-align: center; /* Center-align the navigation links on mobile */
+}
+
+.navbar-nav > li {
+  display: inline-block;
+  float: none; /* Reset the float property */
+}
+
+.navbar-nav > li > a {
+  padding: 10px 15px; /* Adjust padding as needed */
+}
+
+.navbar-collapse {
+  text-align: center; /* Center-align the navigation links on mobile */
+}
+
+.navbar-collapse.in {
+  overflow-y: auto; /* Add scrolling for small screens */
+}
+
+@media (max-width: 767px) {
+  .navbar-nav {
+    display: block;
+    text-align: left; /* Align the navigation links to the left on mobile */
+  }
+
+  .navbar-nav > li {
+    display: block;
+  }
+
+  .navbar-collapse {
+    text-align: left; /* Align the navigation links to the left on mobile */
+  }
+
+  .navbar-collapse.collapse {
+    display: none;
+  }
+
+  .navbar-collapse.in {
+    display: block;
+  }
+}
+/* Import your existing styles or add additional styles for the Compose Blog page */
+.container-inner {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #e3d5cc;
+  padding-bottom: 60px;
+}
+
+.title {
+    font-size: 3rem;
+    margin: 3vh;
+    border: 7px dashed #ffff;
+    border-radius: 20px;
+    padding: 1vh 3vw;
+  }
+
+.compose-card {
+  width: 70%;
+  background-color: #ffffff;
+  margin: 20px auto;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.compose-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 1.5rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 10px 80px;
+}
+
+.btn-red {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 10px 80px;
+    border: 1px solid #e3d5cc;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(77, 72, 72);
+    background-color: #e3d5cc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .btn-red:hover {
+    background-color: #b89c8a;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+/* Media Query for screens with a maximum width of 600px (typical smartphones) */
+@media (max-width: 600px) {
+  .compose-card {
+    width: 90%;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  label {
+    font-size: 1.2rem;
+  }
+
+  button {
+    padding: 10px 40px;
+  }
+}

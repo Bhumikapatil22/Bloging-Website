@@ -1,0 +1,328 @@
+/* Common styles for all screen sizes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .navbar {
+    border-radius: 0;
+    margin-bottom: 0;
+    padding-top: 10px;
+  }
+  
+  .navbar-brand {
+    font-size: 18px; /* Adjust font size as needed */
+  }
+  
+  .navbar-toggle {
+    background-color: #fff; /* Background color of the hamburger icon */
+  }
+  
+  .navbar-toggle .icon-bar {
+    background-color: #333; /* Color of the hamburger icon bars */
+  }
+  
+  .navbar-nav {
+    text-align: center; /* Center-align the navigation links on mobile */
+  }
+  
+  .navbar-nav > li {
+    display: inline-block;
+    float: none; /* Reset the float property */
+  }
+  
+  .navbar-nav > li > a {
+    padding: 10px 15px; /* Adjust padding as needed */
+  }
+  
+  .navbar-collapse {
+    text-align: center; /* Center-align the navigation links on mobile */
+  }
+  
+  .navbar-collapse.in {
+    overflow-y: auto; /* Add scrolling for small screens */
+  }
+  
+  /* Media query for screens smaller than 768px (typical mobile devices) */
+  @media (max-width: 767px) {
+    .navbar-nav {
+      display: block;
+      text-align: left; /* Align the navigation links to the left on mobile */
+    }
+  
+    .navbar-nav > li {
+      display: block;
+    }
+  
+    .navbar-collapse {
+      text-align: left; /* Align the navigation links to the left on mobile */
+    }
+  
+    .navbar-collapse.collapse {
+      display: none;
+    }
+  
+    .navbar-collapse.in {
+      display: block;
+    }
+  }
+  
+  .container-inner {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #e3d5cc;
+    padding-bottom: 60px;
+  }
+  
+  .title {
+    font-size: 3rem;
+    margin: 6vh;
+    border: 7px dashed #ffff;
+    border-radius: 20px;
+    padding: 1vh 5vw;
+  }
+  
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100vw;
+    margin: 0 auto;
+  }
+  
+  .card {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 400px; /* Adjust the max-width as needed */
+    margin: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    position: relative;
+  }
+  
+  .blog-info {
+    margin: 20px 5px;
+    margin-bottom: 100px;
+  }
+  
+  .blog-tag {
+    color: #1faa59;
+    font-size: 1.5rem;
+    background-color: #fff; /* Background color for contrast */
+    padding: 0.2rem 0.5rem; /* Adjust padding for better spacing */
+    border-radius: 5px; /* Add rounded corners for a softer look */
+    display: inline-block; /* Ensure the tag appears inline */
+    margin-bottom: 0.5rem; /* Adjust margin for spacing */
+    font-weight: bold; /* Emphasize the text */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+  }
+  
+  .blog-tag:hover {
+    background-color: #1faa59; /* Change background color on hover */
+    color: #fff; /* Change text color on hover */
+  }
+  
+  .blog-name {
+    font-size: 2.4rem;
+    font-weight: 600;
+  }
+  
+  .description {
+    font-size: 1.5rem;
+    cursor: default;
+  }
+  
+  .btn-red {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 10px 80px;
+    border: 1px solid #e3d5cc;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(77, 72, 72);
+    background-color: #e3d5cc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition on hover */
+  }
+  
+  .btn-red:hover {
+    background-color: #b89c8a;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhance the shadow on hover */
+  }
+  
+  .image {
+    padding: 20px;
+    padding-top: 30px;
+    width: 350px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+  }
+  
+  p {
+    font-size: 1.5rem;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+  
+  .container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  
+  .footer {
+    margin-top: auto; /* Push the footer to the bottom */
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #333333;
+  }
+  
+  .footer p {
+    margin-top: 25px;
+    font-size: 12px;
+    letter-spacing: 5px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    color: #e3d5cc;
+  }
+  
+  .btn-compose {
+    position: fixed;
+    bottom: 50px;
+    right: 115px;
+    z-index: 9999; /* Set a high z-index value to keep the button above other elements */
+    margin-bottom: 50px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    border: 2px solid #b89c8a;
+    background-color: #b89c8a;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .btn-compose:hover {
+    background-color: #b5a397;
+    color: rgb(77, 72, 72);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .btn-red:hover {
+    color: white;
+  }
+  
+  
+  
+  @media (max-width: 767px) {
+    .card {
+      width: 80%; /* Full width for cards on mobile devices */
+      max-width: none; /* Remove max-width on mobile */
+    }
+  
+    .image {
+      padding: 10px;
+      padding-top: 15px;
+      width: 260px;
+    }
+  
+    .btn-compose {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+    }
+  }
+  
+  
+
+
+/* Update the styles for the buttons */
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  position: absolute;
+  bottom: 0;
+  /* width: 100%; */
+}
+
+.btn-read-more {
+  flex-grow: 1; /* Allow the button to take available space */
+  border-radius: 10px;
+  margin-right: 5px; /* Adjust margin for better spacing */
+  margin-bottom: 10px; /* Adjust margin for better spacing */
+}
+
+.btn-delete {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  border: 1px solid #e3d5cc;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(77, 72, 72);
+  background-color: #e3d5cc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 10px; /* Adjust margin for better spacing */
+}
+
+.btn-delete:hover {
+  background-color: #b89c8a;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Existing styles */
+
+/* Add this media query for responsiveness */
+@media (max-width: 767px) {
+  .btn-read-more {
+    font-size: 14px; /* Adjust the font size for smaller screens */
+  }
+
+  .btn-delete {
+    font-size: 16px; /* Adjust the font size for smaller screens */
+    padding: 8px 15px; /* Adjust padding for better spacing */
+  }
+
+  .button-container {
+    flex-direction: row; /* Stack buttons vertically on smaller screens */
+    align-items: center;
+    justify-content: center; 
+    /* Align buttons to the start on smaller screens */
+  }
+}
+
+  

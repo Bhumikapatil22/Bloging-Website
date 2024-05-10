@@ -1,0 +1,211 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.navbar {
+  border-radius: 0;
+  margin-bottom: 0;
+  padding-top: 10px;
+}
+
+.navbar-brand {
+  font-size: 18px; /* Adjust font size as needed */
+}
+
+.navbar-toggle {
+  background-color: #fff; /* Background color of the hamburger icon */
+}
+
+.navbar-toggle .icon-bar {
+  background-color: #333; /* Color of the hamburger icon bars */
+}
+
+.navbar-nav {
+  text-align: center; /* Center-align the navigation links on mobile */
+}
+
+.navbar-nav > li {
+  display: inline-block;
+  float: none; /* Reset the float property */
+}
+
+.navbar-nav > li > a {
+  padding: 10px 15px; /* Adjust padding as needed */
+}
+
+.navbar-collapse {
+  text-align: center; /* Center-align the navigation links on mobile */
+}
+
+.navbar-collapse.in {
+  overflow-y: auto; /* Add scrolling for small screens */
+}
+
+@media (max-width: 767px) {
+  .navbar-nav {
+    display: block;
+    text-align: left; /* Align the navigation links to the left on mobile */
+  }
+
+  .navbar-nav > li {
+    display: block;
+  }
+
+  .navbar-collapse {
+    text-align: left; /* Align the navigation links to the left on mobile */
+  }
+
+  .navbar-collapse.collapse {
+    display: none;
+  }
+
+  .navbar-collapse.in {
+    display: block;
+  }
+}
+
+.container-inner {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #e3d5cc;
+  padding-bottom: 60px;
+}
+
+.title {
+  font-size: 3rem;
+  margin: 6vh;
+  border: 7px dashed #ffff;
+  border-radius: 20px;
+  padding: 1vh 5vw;
+}
+
+.card-full {
+  background-color: #ffffff;
+  width: 1000px;
+  margin: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.blog-info {
+  margin: 20px 5px;
+}
+
+.blog-tag {
+  color: #1faa59;
+  font-size: 1.5rem;
+  background-color: #fff;
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.blog-tag:hover {
+  background-color: #1faa59;
+  color: #fff;
+}
+
+.blog-name {
+  font-size: 4rem;
+  font-weight: 600;
+  color: #333; /* Set your preferred text color */
+  text-align: center; /* Center-align the text */
+  margin-top: 20px; /* Add some top margin for spacing */
+}
+
+.blog-name:before,
+.blog-name:after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 50%;
+  background-color: #333; /* Set your preferred line color */
+  margin: 0.5rem auto; /* Adjust spacing around the line */
+}
+
+.description-full {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  cursor: default;
+  text-align: justify;
+  max-width: 800px;
+  margin: 20px 0;
+  color: #555;
+  font-family: "Arial", sans-serif; /* Change 'Arial' to your preferred font family */
+}
+
+.image-full {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+.btn-red {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 10px 80px;
+  border: 1px solid #e3d5cc;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(77, 72, 72);
+  background-color: #e3d5cc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-red:hover {
+  background-color: #b89c8a;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Your existing styles for other elements can be added here if needed */
+
+
+@media (max-width: 767px) {
+  
+    h2 {
+        font-size: 1.7rem;
+    }
+    .card-full{
+        width: 400px;
+        margin: 20px;
+        margin-bottom: 50px;
+        padding: 0.5rem;
+    }
+    .image-full {
+      padding: 5px;
+      padding-top: 15px;
+      width: 350px;
+    }
+    .blog-name {
+        font-size: 2rem;
+    }
+    .description-full {
+       padding: 10px 30px;
+       font-size: 1.8rem;
+       line-height: 1.2;
+       max-width: 400px;
+       margin: 10px 0px;
+    }
+  }

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Blog - Daily Journal</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Bloggers.</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li id="home"><a href="/">HOME</a></li>
+                    <li id="about"><a href="/about">ABOUT US</a></li>
+                    <li id="contact"><a href="/contact">CONTACT US</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-inner">
+        <div>
+            <h1 class="title">Trending Blogs</h1>
+        </div>
+
+        <div class="cards-container">
+
+            <% blogPosts.forEach((post) => {  %>
+                
+                <div class='card'>
+                    <img src="<%= post.imageURL %>" alt='place' class='image'></img>
+                    <div class="blog-info">
+                        <div class='blog-details'>
+                            <h4 class='blog-tag'>New</h4>
+                            <h4 class='blog-name'><%= post.title %></h4>
+                        </div>
+                        <div class="description">
+                            <%= post.description.substring(0,180) %>...
+                        </div>
+                    </div>
+            
+                    <div class="button-container">
+                        <!-- Read More button -->
+                        <a href="/post/<%= post._id %>" class='btn-red btn-read-more'>Read More...</a>
+    
+                        <!-- Delete button with icon -->
+                        <a href="/post/delete/<%= post._id %>">
+                            <button class="btn-delete"><i class="fas fa-trash-alt"></i></button>
+                        </a>
+                    </div>
+                </div>
+
+            <% }) %>
+
+        </div>
+    </div>
+    <a href="/compose"><button class='btn-compose'>Compose +</button></a>
+
+    <div class="footer">
+        <p>Made by Sakshi & Bhumika </p>
+    </div>
+    </div>
+</body>
+
+</html>

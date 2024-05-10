@@ -1,0 +1,163 @@
+/* Common styles for all screen sizes */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.navbar {
+  border-radius: 0;
+  margin-bottom: 0;
+  padding-top: 10px;
+}
+
+.navbar-brand {
+  font-size: 18px; /* Adjust font size as needed */
+}
+
+.navbar-toggle {
+  background-color: #fff; /* Background color of the hamburger icon */
+}
+
+.navbar-toggle .icon-bar {
+  background-color: #333; /* Color of the hamburger icon bars */
+}
+
+.navbar-nav {
+  text-align: center; /* Center-align the navigation links on mobile */
+}
+
+.navbar-nav > li {
+  display: inline-block;
+  float: none; /* Reset the float property */
+}
+
+.navbar-nav > li > a {
+  padding: 10px 15px; /* Adjust padding as needed */
+}
+
+.navbar-collapse {
+  text-align: center; /* Center-align the navigation links on mobile */
+}
+
+.navbar-collapse.in {
+  overflow-y: auto; /* Add scrolling for small screens */
+}
+
+/* Media query for screens smaller than 768px (typical mobile devices) */
+@media (max-width: 767px) {
+  .navbar-nav {
+    display: block;
+    text-align: left; /* Align the navigation links to the left on mobile */
+  }
+
+  .navbar-nav > li {
+    display: block;
+  }
+
+  .navbar-collapse {
+    text-align: left; /* Align the navigation links to the left on mobile */
+  }
+
+  .navbar-collapse.collapse {
+    display: none;
+  }
+
+  .navbar-collapse.in {
+    display: block;
+  }
+}
+
+/* Import your existing styles or add additional styles for the About Us page */
+.container-inner {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #e3d5cc;
+  padding-bottom: 60px;
+}
+
+.title {
+  font-size: 3rem;
+  margin: 6vh;
+  border: 7px dashed #ffff;
+  border-radius: 20px;
+  padding: 1vh 5vw;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.about-text {
+  text-align: justify;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-red {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 10px 80px;
+  border: 1px solid #e3d5cc;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(77, 72, 72);
+  background-color: #e3d5cc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-red:hover {
+  background-color: #b89c8a;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Media Query for screens with a maximum width of 600px (typical smartphones) */
+@media (max-width: 600px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .about-content{
+    max-width: 90%;
+    margin: 20px auto;
+  }
+
+  .about-text {
+    font-size: 1.2rem;
+  }
+
+  .about-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .about-image img {
+    max-width: 80%;
+  }
+}
